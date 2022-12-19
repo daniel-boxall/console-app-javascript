@@ -97,7 +97,10 @@ var finances = [
     var greatestDecrease = ['Jan-2010', 0];
     //Initialize total change in profits to 0.
     var totalChange = 0;
+    //Initialize average change in profits to 0.
     var average = 0;
+    //Initialize difference to 0.
+    var difference = 0;
     
     
     
@@ -142,18 +145,18 @@ var finances = [
     "Total Months:  " + finances.length + 
     "\nNet Total: $" + total + 
     "\nAverage Change:  $" + Math.round(average * 100) / 100 + 
-    "\nGreatest Increase in Profits: " + greatestIncrease[0] + " $" + greatestIncrease[1] + 
-    "\nGreatest Decrease in Profits: " + greatestDecrease[0] + " $" + greatestDecrease[1]
+    "\nGreatest Increase in Profits: " + greatestIncrease[0] + " ($" + greatestIncrease[1] + ")" + 
+    "\nGreatest Decrease in Profits: " + greatestDecrease[0] + " ($" + greatestDecrease[1] + ")"
     );
     
     // Add event listener to button element
     document.getElementById('analyze-button').addEventListener('click', function() {
         // Perform financial analysis and display results
         alert("Financial Analysis\n" +
-          "----------------------------\n" +
-          "Total Months:  " + finances.length + "\n" +
-          "Total: $" + total + "\n" +
-          "Average Change:  $" + Math.round(average * 100) / 100 + "\n" +
-          "Greatest Increase in Profits: " + greatestIncrease[0] + " $" + greatestIncrease[1] + "\n" +
-          "Greatest Decrease in Profits: " + greatestDecrease[0] + " $" + greatestDecrease[1]);
-      });
+            "----------------------------\n" +
+            "Total Months:  " + finances.length + "\n" +
+            "Total: $" + total + "\n" +
+            "Average Change:  $" + Math.round(average * 100) / 100 + "\n" +
+            "Greatest Increase in Profits: " + greatestIncrease[0] + " ($" + greatestIncrease[1] + ")" + "\n" +
+            "Greatest Decrease in Profits: " + greatestDecrease[0] + " ($" + greatestDecrease[1] + ")");
+    });
